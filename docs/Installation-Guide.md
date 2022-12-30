@@ -13,7 +13,8 @@ To use the available tools in this repository, you will need to install a few th
 ## 1. Getting all the required tool's files
 1. [Download](../../../archive/refs/heads/stable.zip) or clone the [repository](../../../).
 2. Unzip or move the repository in the directory of your choice.
-3. Download the weights file(s) (a weights file is a folder containing an `assets`, `variables` folder and a `saved_model.pb` file, they might be zipped so you need to unzip it) and maybe some images you want to run the inference on and put it/them in the same folder. Images should be put in a sub-directory named `images\<Mode name>`.
+3. Download the weights file(s) (a weights file is a folder containing an `assets`, `variables` folder and a `saved_model.pb` file, they might be zipped so you need to unzip it). The weight files are available in the release section of this repository.
+4. Images you want to run the inference should be put in a sub-directory named `images\<Mode name>`.
 
 ## 2. Setting up the Python Environment
 1. Download and install [MiniConda3](https://conda.io/en/latest/miniconda), you can also use [Anaconda3](https://www.anaconda.com/products/individual#Downloads).
@@ -32,7 +33,7 @@ Using a CUDA-capable GPU that supports CUDA 11.2 (please refer to [CUDA GPUs lis
 2. Download and install [cuDNN 8.1.1 for CUDA 11.2](https://developer.nvidia.com/rdp/cudnn-archive) ([Installation Guide](https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html)).
 
 
-## 4. Installing TensorFlow Object Detection API
+## 4. Optionnal:  Installing TensorFlow Object Detection API, we do not advise you to install it unless you want to start a new training.
 :information_source: This step is only required if you want to train Mask R-CNN Inception ResNet V2. Training requires a recent high-end GPU with a lot of VRAM as a GTX 1080 Ti (11 GB VRAM) is already struggling training the network using ​a batch of one image.
 
 To train Mask R-CNN Inception ResNet V2 from the TF OD API, you will need to install the OD API. To do that:
