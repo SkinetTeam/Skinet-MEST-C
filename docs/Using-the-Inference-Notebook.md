@@ -14,9 +14,9 @@ An inference notebook is available in the root directory of the repository. You 
 
 ## 1. Requirements
 At that time, you will at least need the following resources to run the inference notebook : 
-* One or more weights file(s) (a weights file is a folder containing an `assets`, `variables` folder and a `saved_model.pb` file, they might be zipped so you need to unzip it) in the same folder as the different tools. Images should be put in a sub-directory named `images\<Mode name>`;
+* The weights file(s) (a weights file is a folder containing an `assets`, `variables` folder and a `saved_model.pb` file, they might be zipped so you need to unzip it) in the same folder as the different tools.  Those wight files (cortex, mest_main and mest_glom) can be uploaded from the realease section of this repo.
 
-* An image to start an inference, it should be placed in a directory named `images` in a subdirectory named as the inference mode you want to use with it (for example, a subdirectory names `main`).
+* At least one image to start an inference, it should be placed in a directory named `images` in a subdirectory named as the inference mode you want to use with it (for example, a subdirectory named `main`). We recommand that you use the inference mode named "main" to start.
 
   To get performance metrics for an image, you will also need an annotations file (see [Supported formats](Annotations-format-compatibility.md#supported-formats)) having the same name as the image in the same folder.
 
@@ -24,7 +24,7 @@ At that time, you will at least need the following resources to run the inferenc
 You will find specific requirements for Google Colaboratory in the [Using the Inference Notebook with Google Colaboratory](Using-the-Inference-Notebook-with-Google-Colaboratory.md#specific-requirements) page.
 
 ### Local usage requirements
-You will need the Python environment installed (see [Installation Guide](Installation-Guide.md) [[FR ver.](Guide-d'installation.md)]).
+You will need the Python environment installed (see [Installation Guide](Installation-Guide.md)).
 
 ## 2. Configuration of the notebook
 ### Working with Google Colaboratory
@@ -32,7 +32,7 @@ You will find the specific configuration explanation for Google Colaboratory in 
 
 
 ### Working Locally
-Simply start Jupyter via the shortcut created during the [Installation Guide](Installation-Guide.md) [[FR ver.](Guide-d'installation.md)] or by starting an Anaconda (or Miniconda) prompt, navigating to the repository folder using `cd` command, activating the environment via `conda activate Skinet`, and finally by starting Jupyter using `jupyter notebook`.
+Simply start Jupyter via the shortcut created during the [Installation Guide](Installation-Guide.md) or by starting an Anaconda (or Miniconda) prompt, navigating to the repository folder using `cd` command, activating the environment via `conda activate Skinet`, and finally by starting Jupyter using `jupyter notebook`.
 
 
 ### Common configuration
@@ -52,7 +52,7 @@ moveAutoCleanedImageToNextMode = True #@param {type:"boolean"}
 These parameters will control which mode the Inference Tool will run and how much text will be displayed.
 
 
-* `mode`: The name of the inference mode to use. Note that 'chain' will use multiple modes. 
+* `mode`: The name of the inference mode to use. Note that 'chain' will use multiple modes and is the prefered mode. 
 * `displayMode`: Whether to display every step (`"All steps"`) of an inference, or only statistics (`"Only statistics"`). 
 
 
