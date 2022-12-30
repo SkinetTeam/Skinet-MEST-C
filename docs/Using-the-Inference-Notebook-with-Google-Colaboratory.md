@@ -32,8 +32,8 @@ The needed files are:
 cortex = "skinet_cortex"
 mest_main = "skinet_mest_main"
 mest_glom = "skinet_mest_glom"
+Put those weight files in your Google Drive Folder
 
-Then you can either put those files in your local environment or in your Google Drive Folder.
 
 ## 2. Configuration of the notebook
 ​	A few variables have to be set in order to be able to run the notebook on Google Colaboratory. These are essentially paths to the needed files in Google Drive.
