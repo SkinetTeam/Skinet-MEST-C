@@ -38,7 +38,7 @@ Then you can either put those files in your local environment or in your Google 
 ## 2. Configuration of the notebook
 ​	A few variables have to be set in order to be able to run the notebook on Google Colaboratory. These are essentially paths to the needed files in Google Drive.
 
-### "Connecting to Google Drive" cell if you want to retrieve the files from your Google Drive Folder
+### "Connecting to Google Drive" cell 
 ​	You can do this during the first execution, after completing all other configurations.  
 ​	The first time this cell runs, a link will be prompted to allow Google Colaboratory to access your Google Drive folders. Follow the link, choose the account containing the required files (at least the weights file) and accept. Then copy the given link to the input text field under the first link you followed.
 
