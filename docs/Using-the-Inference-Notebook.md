@@ -14,8 +14,10 @@ An inference notebook is available in the root directory of the repository. You 
 
 ## 1. Requirements
 At that time, you will at least need the following resources to run the inference notebook : 
-* The weights file(s) (a weights file is a folder containing an `assets`, `variables` folder and a `saved_model.pb` file, they might be zipped so you need to unzip it) in the same folder as the different tools.  Those wight files (cortex, mest_main and mest_glom) can be uploaded from the realease section of this repo.
-
+* The weights file(s) (a weights file is a folder containing an `assets`, `variables` folder and a `saved_model.pb` file, they might be zipped so you need to unzip it) in the same folder as the different tools.  Those weight files (cortex, mest_main and mest_glom) can be uploaded from the realease section of this repo. You need to get the 3 weight files to be able to have a full evaluation: 
+cortex = "skinet_cortex"
+mest_main = "skinet_mest_main"
+mest_glom = "skinet_mest_glom"
 * At least one image to start an inference, it should be placed in a directory named `images` in a subdirectory named as the inference mode you want to use with it (for example, a subdirectory named `main`). We recommand that you use the inference mode named "main" to start.
 
   To get performance metrics for an image, you will also need an annotations file (see [Supported formats](Annotations-format-compatibility.md#supported-formats)) having the same name as the image in the same folder.
