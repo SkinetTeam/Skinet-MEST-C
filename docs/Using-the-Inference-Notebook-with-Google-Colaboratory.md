@@ -25,21 +25,20 @@ For better performance, enable GPU under hardware accelerator: `Runtime` > `Chan
 ![img/colab_enable_gpu.png](img/colab_enable_gpu.png)
 
 
-### Getting the files easily without upload
-​	You can get the files directly in your Google Drive folder without having to upload it, you will need to know someone that can add you (with a Google Account, not an access link) to a Google Drive folder containing the wanted files and give you edit permissions. 
+### Getting the files:
+The needed files are:
+- the images you want to infer (in a .jpg format), optionnaly with their annotation files (if you want to compare the CNN's prediction to your ground truth).
+- the weight files which are available in the releases section of this repo, you need to get the 3 weight files to be able to have a full evaluation: 
+cortex = "skinet_cortex"
+mest_main = "skinet_mest_main"
+mest_glom = "skinet_mest_glom"
 
-1. Once you have access to the folder, make a copy of the wanted file (for example, the weights file as it is quite heavy). _Be sure that the person has **paused** its syncing client if it has **Backup and Sync from Google** installed on a running computer_.
-
-2. Right-click on the copy and move it to your personal Google Drive folder. _Once it is done, the other person can reactivate the syncing client if needed._
-
-3. You can rename the file that is in your Google Drive and use it with the notebook from now on.
-
-4. Repeat steps 1 to 3 for each file or folder you have to get.
+Then you can either put those files in your local environment or in your Google Drive Folder.
 
 ## 2. Configuration of the notebook
 ​	A few variables have to be set in order to be able to run the notebook on Google Colaboratory. These are essentially paths to the needed files in Google Drive.
 
-### "Connecting to Google Drive" cell
+### "Connecting to Google Drive" cell if you want to retrieve the files from your Google Drive Folder
 ​	You can do this during the first execution, after completing all other configurations.  
 ​	The first time this cell runs, a link will be prompted to allow Google Colaboratory to access your Google Drive folders. Follow the link, choose the account containing the required files (at least the weights file) and accept. Then copy the given link to the input text field under the first link you followed.
 
@@ -99,7 +98,6 @@ cortex = "skinet_cortex_v2"
 main = "skinet_main_v1"
 mest_main = "skinet_mest_main_v3"
 mest_glom = "skinet_mest_glom_v3"
-inflammation = "skinet_inflammation_v3"
 paths = {'cortex': cortex, 'main': main, 'mest_main': mest_main, 
          'mest_glom': mest_glom, 'inflammation': inflammation}
 [...]
