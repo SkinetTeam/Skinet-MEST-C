@@ -69,29 +69,3 @@ annotationsFile = True
 [...]
 ```
 
-### "Retrieving Weights File" cell
-​	Same thing than retrieving an image file using Google Drive but it is the saved weights file (folder or zip) for inference modes. With the past example, it would be `Directory2/saved_models/` as `customPathInDrive`.
-
-- `execMode` should match the name of inference mode you will run with the images that will be retrieved;
-- `customPathInDrive` must represent all the directories between the root directory and the weights file(s). In the example, it would be `Directory2/saved_models/`. Keep it empty if **the file(s) is directly in the root directory** of Google Drive;
-- `isZipped` should be `True` if weights file(s) that will be retrieved are zipped (so they will be unzipped automatically), else it should be `False`. You can also use the checkbox on the right on Google Colaboratory to do that.
-
-```Python
-[...]
-execMode = 'chain'
-customPathInDrive = ""
-isZipped = True
-[...]
-```
-​	Following parameters are specific to the nephrology inference modes this Inference Tool was developed for. You may want modify this cell to adapt to your own inference modes. These parameters represent all the possible inference modes and their respective weights file name. The tool will try to retrieve folders/zip archives with the same name in your Google Drive.
-```Python
-[...]
-cortex = "skinet_cortex_v2"
-main = "skinet_main_v1"
-mest_main = "skinet_mest_main_v3"
-mest_glom = "skinet_mest_glom_v3"
-paths = {'cortex': cortex, 'main': main, 'mest_main': mest_main, 
-         'mest_glom': mest_glom, 'inflammation': inflammation}
-[...]
-```
-
