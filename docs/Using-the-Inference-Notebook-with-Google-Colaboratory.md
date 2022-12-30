@@ -28,11 +28,6 @@ For better performance, enable GPU under hardware accelerator: `Runtime` > `Chan
 ### Getting the files:
 The needed files are:
 - the images you want to infer (in a .jpg format), optionnaly with their annotation files (if you want to compare the CNN's prediction to your ground truth).
-- the weight files which are available in the releases section of this repo, you need to get the 3 weight files to be able to have a full evaluation: 
-cortex = "skinet_cortex"
-mest_main = "skinet_mest_main"
-mest_glom = "skinet_mest_glom"
-Put those weight files in your Google Drive Folder
 
 
 ## 2. Configuration of the notebook
@@ -56,9 +51,6 @@ Root directory of Google Drive
        ├─── images
        │    ├─── example1.png
        │    └─── example2.png
-       └─── saved_models
-            ├─── mode1
-            └─── mode2.zip
 ```
 
 *   `execMode` should match the name of inference mode you will run with the images that will be retrieved;
